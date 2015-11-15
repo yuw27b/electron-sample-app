@@ -1,0 +1,12 @@
+{
+  "name": "electron-weather",
+  "version": "0.0.1",
+  "description": "Sample app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yu Watanabe",
+  "private": true
+}

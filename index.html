@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Electron weather</title>
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+	<h1>Electron weather</h1>
+	<div class="input">
+		<input class="input_input" type="text" placeholder="都市名を入力" />
+	</div>
+	<div class="output"></div>
+
+	<script type="text/template" id="outputTemplate">
+		<ul class="weather">
+			<%_.each(data, function (day) {%>
+				<li class="weather_li">
+					<p class="weather_day"><%=day.dateLabel%></p>
+					<div class="weather_main">
+						<img class="weather_icon" src="<%=day.image.url%>" alt="<%=day.telop%>">
+						<p class="weather_title"><%=day.telop%></p>
+					</div>
+					<p class="weather_temperature">
+						<span class="weather_tempMax"><%=day.temperature.max === null ? '-' : day.temperature.max.celsius%></span>
+						<span class="weather_tempMin"><%=day.temperature.min === null ? '-' : day.temperature.min.celsius%></span>
+					</p>
+				</li>
+			<%});%>
+		</ul>
+	</script>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
