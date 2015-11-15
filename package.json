@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Sample app",
   "main": "main.js",
+  "dependencies": {
+    "axios": "^0.7.0",
+    "lodash": "^3.10.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
